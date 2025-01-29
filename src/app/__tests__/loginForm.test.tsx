@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import FormInputUI from '../auth/common/inputUI';
+import FormInputUI from '../auth/_common/inputUI';
 
 jest.mock('../auth/common/padding.css', () => ({
   paddingSprinkles: () => 'mocked-padding-class',

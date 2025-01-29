@@ -4,19 +4,20 @@ import { paddingSprinkles } from '@/app/_styles/padding.css';
 import { myTargetContainer } from '../_my.css';
 import { useEffect, useState } from 'react';
 import { usePopupStore } from '@/app/_store/popup/popupStore';
-import { supabaseClient } from '@/app/_lib/supabaseClient';
 import { useUserInfoStore } from '@/app/_store/user/userStore';
 import { fetchUserGoal, saveUserGoal } from '../_utils/goalUtils';
 
 const GoalField = () => {
   const [goal, setGoal] = useState<string>('');
 
-  const setOpenPopup = usePopupStore((state) => state.setOpenPopup);
-  const setMessageState = usePopupStore((state) => state.setMessage);
+  const { setOpenPopup, setMessage: setMessageState } = usePopupStore((state) => ({
+    setOpenPopup: state.setOpenPopup,
+    setMessage: state.setMessage,
+  }));
 
   const userInfo = useUserInfoStore((state) => state.userInfo);
 
-  const onGoalSave = async (goal: string) => {
+  const onGoalSave = async () => {
     try {
       const message = await saveUserGoal(userInfo.id, userInfo.nickname, goal);
       setMessageState(message);
@@ -30,7 +31,7 @@ const GoalField = () => {
 
   const handleKeyDown = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && goal.trim()) {
-      await onGoalSave(goal);
+      await onGoalSave();
     }
   };
 
