@@ -9,7 +9,7 @@ import ConsistencyBox from './_components/consistencyBox';
 import ShapeButton from './_components/shapeButton';
 import ShapeTypeBox from './_components/shapeTypeBox';
 
-const ShapePage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
+const ShapePage: React.FC<{ onButtonClick: StepChangeHandler }> = ({ onButtonClick }) => {
   return (
     <article>
       <div className={`${flexSprinklesFc({ flexDirection: 'column', gap: '16px' })} `}>

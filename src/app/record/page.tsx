@@ -7,8 +7,6 @@ import ShapePage from './(info)/shape/page';
 import DetailPage from './(info)/detail/page';
 import usePageExitGuard from '../_hook/usePageExitGuard';
 
-export type StepChangeHandler = (newStep: number) => void;
-
 export enum Step {
   STEP1 = 0,
   STEP2,
@@ -16,10 +14,12 @@ export enum Step {
   STEP4,
 }
 
+export type StepChangeHandler = (newStep: Step) => void;
+
 const Page = () => {
   const [step, setStep] = useState<Step>(Step.STEP1);
 
-  const handleButtonClick = (step: Step) => {
+  const handleButtonClick: StepChangeHandler = (step: Step) => {
     setStep(step);
   };
 

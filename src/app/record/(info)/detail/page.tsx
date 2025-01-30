@@ -13,7 +13,7 @@ import useDetailActions from './_hook/useDetailActions';
 import DetailPopup from './_components/detailPopup';
 import TitleText from './_components/titleText';
 
-const DetailPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
+const DetailPage: React.FC<{ onButtonClick: StepChangeHandler }> = ({ onButtonClick }) => {
   const detailPopupState = usePopupStore((state) => state.openPopup);
   const recordNoteState = useInfoStore((state) => state.recordNote);
   const { onSaveClick } = useDetailActions(onButtonClick);

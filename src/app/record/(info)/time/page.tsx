@@ -6,7 +6,7 @@ import TimeButton from './_components/timeButton';
 import TimePicker from './_components/timePicker';
 import TimeTitle from './_components/timeTitle';
 
-const TimePage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
+const TimePage: React.FC<{ onButtonClick: StepChangeHandler }> = ({ onButtonClick }) => {
   return (
     <article className={infoContainer}>
       <TimeTitle />

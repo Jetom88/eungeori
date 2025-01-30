@@ -16,7 +16,7 @@ import RecordCalender from './_components/recordCalender';
 import { fetchFilteredData, handleDelete } from './_utils/memoUtils';
 import RecordPopup from './_components/recordPopup';
 
-const RecordPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
+const RecordPage: React.FC<{ onButtonClick: StepChangeHandler }> = ({ onButtonClick }) => {
   const [filteredData, setFilteredData] = useState<BowelAttributes[] | []>([]);
   const [deleteTargetId, setDeleteTargetId] = useState<string | null>(null);
 
