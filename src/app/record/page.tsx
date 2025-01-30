@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import RecordPage from '.';
-import TimePage from './(info)/time/page';
-import ShapePage from './(info)/shape/page';
-import DetailPage from './(info)/detail/page';
+import TimePage from './(info)/time';
+import ShapePage from './(info)/shape';
+import DetailPage from './(info)/detail';
 import usePageExitGuard from '../_hook/usePageExitGuard';
 
 export enum Step {
