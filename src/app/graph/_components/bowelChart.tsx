@@ -4,8 +4,9 @@ import { TransformedBowelData } from '../_utils';
 import { Line } from 'react-chartjs-2';
 
 import BowelDetails from './bowelDetails';
-import { CustomLineGraph } from '../_plugins/chart/customLineGraph';
+
 import { getBowelData } from '../_utils/getBowelData';
+import { CustomLineGraph } from '../_plugins/chart/customLineGraph';
 
 type BowelChartProps = {
   bowelDate: TransformedBowelData[];
