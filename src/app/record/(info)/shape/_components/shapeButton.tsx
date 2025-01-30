@@ -1,7 +1,8 @@
 import Button from '@/app/_components/common/button';
 import { flexSprinklesFc } from '@/app/_components/common/utils/flex';
-import { Step, StepChangeHandler } from '@/app/record/page';
+
 import { colors } from '@/app/_styles/colors.css';
+import { StepChangeHandler, Step } from '@/app/record/types';
 
 const ShapeButton = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
   return (

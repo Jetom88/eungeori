@@ -4,10 +4,10 @@ import { flexSprinklesFc } from '@/app/_components/common/utils/flex';
 import { heading2, semiBold } from '@/app/_styles/font.css';
 import { paddingSprinkles } from '@/app/_styles/padding.css';
 
-import { StepChangeHandler } from '../../page';
 import ConsistencyBox from './_components/consistencyBox';
 import ShapeButton from './_components/shapeButton';
 import ShapeTypeBox from './_components/shapeTypeBox';
+import { StepChangeHandler } from '../../types';
 
 const ShapePage: React.FC<{ onButtonClick: StepChangeHandler }> = ({ onButtonClick }) => {
   return (
