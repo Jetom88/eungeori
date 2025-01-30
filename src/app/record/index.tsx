@@ -12,9 +12,9 @@ import { BowelAttributes } from '../_types/bowelAttributesSchema';
 import { useUserInfoStore } from '../_store/user/userStore';
 import { usePopupStore } from '../_store/popup/popupStore';
 
-import RecordPopup from './_components/recordPopup';
 import RecordCalender from './_components/recordCalender';
 import { fetchFilteredData, handleDelete } from './_utils/memoUtils';
+import RecordPopup from './_components/RecordPopup';
 
 const RecordPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
   const [filteredData, setFilteredData] = useState<BowelAttributes[] | []>([]);
