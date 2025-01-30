@@ -97,14 +97,16 @@ export const useProfileState = () => {
         .eq('id', id)
         .single();
 
-      if (error || !data?.avatar_url) {
+      if (error) {
         throw error;
       }
+
+      const avatarUrl = data?.avatar_url ?? '/image/profile.png';
 
       setUserInfo({
         id,
         nickname: sessionData.session.user.user_metadata.nickname || '',
-        avatarUrl: data.avatar_url,
+        avatarUrl,
       });
     } catch (e) {
       console.error(e);
