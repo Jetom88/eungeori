@@ -41,7 +41,7 @@ const SignupForm = () => {
         <FormInputUI
           text="비밀번호"
           type="password"
-          maxLegnth={12}
+          maxLength={12}
           register={register('password')}
           errorMessage={errors.password?.message}
         />
@@ -49,14 +49,14 @@ const SignupForm = () => {
         <FormInputUI
           text="비밀번호 확인"
           type="password"
-          maxLegnth={12}
+          maxLength={12}
           register={register('confirmPassword')}
           errorMessage={errors.confirmPassword?.message}
         />
 
         <FormInputUI
           text="닉네임"
-          maxLegnth={12}
+          maxLength={12}
           register={register('nickname')}
           errorMessage={errors.nickname?.message}
         />
