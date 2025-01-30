@@ -10,8 +10,8 @@ import { usePopupStore } from '@/app/_store/popup/popupStore';
 import { infoContainer } from '../_common/common.css';
 import { Step, StepChangeHandler } from '../../page';
 import useDetailActions from './_hook/useDetailActions';
-import DetailPopup from './_components/DetailPopup';
-import TitleText from './_components/TitleText';
+import DetailPopup from './_components/detailPopup';
+import TitleText from './_components/titleText';
 
 const DetailPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
   const detailPopupState = usePopupStore((state) => state.openPopup);

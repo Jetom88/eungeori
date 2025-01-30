@@ -2,9 +2,9 @@
 
 import { StepChangeHandler } from '../../page';
 import { infoContainer } from '../_common/common.css';
-import TimeButton from './_components/TimeButton';
-import TimePicker from './_components/TimePicker';
-import TimeTitle from './_components/TimeTitle';
+import TimeButton from './_components/timeButton';
+import TimePicker from './_components/timePicker';
+import TimeTitle from './_components/timeTitle';
 
 const TimePage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
   return (

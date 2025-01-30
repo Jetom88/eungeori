@@ -14,7 +14,7 @@ import { usePopupStore } from '../_store/popup/popupStore';
 
 import RecordCalender from './_components/recordCalender';
 import { fetchFilteredData, handleDelete } from './_utils/memoUtils';
-import RecordPopup from './_components/RecordPopup';
+import RecordPopup from './_components/recordPopup';
 
 const RecordPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
   const [filteredData, setFilteredData] = useState<BowelAttributes[] | []>([]);
@@ -47,7 +47,7 @@ const RecordPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => 
   const handleConfirmDelete = async () => {
     if (!deleteTargetId) return;
 
-    await handleDelete(deleteTargetId, userInfo.id, setFilteredData);
+    await handleDelete(deleteTargetId, userInfo.id, setFilteredData, setMessage);
     setDeleteTargetId(null);
   };
 

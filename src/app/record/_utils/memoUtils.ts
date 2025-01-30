@@ -25,9 +25,8 @@ export const handleDelete = async (
   deleteTargetId: string,
   userId: string,
   setFilteredData: (value: SetStateAction<[] | BowelAttributes[]>) => void,
+  setMessage: (message: string) => void,
 ) => {
-  const setMessage = usePopupStore((state) => state.setMessage);
-
   try {
     const { data, error } = await supabaseClient
       .from('bowel_attributes')
