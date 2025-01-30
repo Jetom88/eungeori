@@ -7,11 +7,11 @@ import { colors } from '@/app/_styles/colors.css';
 
 import useInfoStore from '@/app/_store/info/infoStore';
 import { usePopupStore } from '@/app/_store/popup/popupStore';
-import DetailPopup from './_components/detailPopup';
 import { infoContainer } from '../_common/common.css';
 import { Step, StepChangeHandler } from '../../page';
 import useDetailActions from './_hook/useDetailActions';
-import TitleText from './_components/titleText';
+import DetailPopup from './_components/DetailPopup';
+import TitleText from './_components/TitleText';
 
 const DetailPage = ({ onButtonClick }: { onButtonClick: StepChangeHandler }) => {
   const detailPopupState = usePopupStore((state) => state.openPopup);
