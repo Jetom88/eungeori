@@ -6,15 +6,7 @@ import TimePage from './(info)/time';
 import ShapePage from './(info)/shape';
 import DetailPage from './(info)/detail';
 import usePageExitGuard from '../_hook/usePageExitGuard';
-
-export enum Step {
-  STEP1 = 0,
-  STEP2,
-  STEP3,
-  STEP4,
-}
-
-export type StepChangeHandler = (newStep: Step) => void;
+import { Step, StepChangeHandler } from './types';
 
 const Page = () => {
   const [step, setStep] = useState<Step>(Step.STEP1);
