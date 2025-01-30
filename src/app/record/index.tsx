@@ -7,7 +7,6 @@ import useInfoStore from '../_store/info/infoStore';
 
 import { plusIconBox, plusIcon } from './_styles/record.css';
 import Image from 'next/image';
-import { Step, StepChangeHandler } from './page';
 import { BowelAttributes } from '../_types/bowelAttributesSchema';
 import { useUserInfoStore } from '../_store/user/userStore';
 import { usePopupStore } from '../_store/popup/popupStore';
@@ -15,6 +14,7 @@ import { usePopupStore } from '../_store/popup/popupStore';
 import RecordCalender from './_components/recordCalender';
 import { fetchFilteredData, handleDelete } from './_utils/memoUtils';
 import RecordPopup from './_components/recordPopup';
+import { Step, StepChangeHandler } from './types';
 
 const RecordPage: React.FC<{ onButtonClick: StepChangeHandler }> = ({ onButtonClick }) => {
   const [filteredData, setFilteredData] = useState<BowelAttributes[] | []>([]);
