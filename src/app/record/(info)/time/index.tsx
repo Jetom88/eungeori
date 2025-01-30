@@ -1,6 +1,6 @@
 'use client';
 
-import { StepChangeHandler } from '../../page';
+import { StepChangeHandler } from '../../types';
 import { infoContainer } from '../_common/common.css';
 import TimeButton from './_components/timeButton';
 import TimePicker from './_components/timePicker';

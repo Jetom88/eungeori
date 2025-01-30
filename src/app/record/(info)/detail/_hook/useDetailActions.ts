@@ -1,9 +1,9 @@
 import { formatToLocalISOString, formatToLocalYYYYMMDD } from '@/app/_common/utils/date';
 import { supabaseClient } from '@/app/_lib/supabaseClient';
-import { Step, StepChangeHandler } from '@/app/record/page';
 import useInfoStore from '@/app/_store/info/infoStore';
 import { usePopupStore } from '@/app/_store/popup/popupStore';
 import { useUserInfoStore } from '@/app/_store/user/userStore';
+import { Step, StepChangeHandler } from '@/app/record/types';
 
 const useDetailActions = (onButtonClick: StepChangeHandler) => {
   const { recordNote, setRecordNote, stoolAttributes, bowelTime, startDate } = useInfoStore();

@@ -4,15 +4,20 @@ import { caption3 } from '@/app/_styles/font.css';
 import { navContainer, navWrapper } from '@/app/_styles/navigation/navigation.css';
 import Image from 'next/image';
 import { gray500, primary } from '@/app/_styles/colors.css';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { pointer } from '@/app/_styles/global.css';
 import { flexSprinklesFc } from './utils/flex';
 
 const Navigation = () => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const [path, setPath] = useState<string>('record');
+
+  useEffect(() => {
+    setPath(pathname.slice(1) || 'record');
+  }, [pathname]);
 
   const handleClick = (pathName: string) => {
     if (pathName) router.push(`/${pathName}`);
